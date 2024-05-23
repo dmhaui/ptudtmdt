@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="masterpage2.Site2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="tieude" runat="server">
+    </asp:ContentPlaceHolder>
+    </title>
+
+    <style>
+        #container{
+            width:auto;
+            height:auto;
+            background-color:aquamarine;
+        }
+        nav{
+            background-color:blueviolet;
+            text-align:right;
+        }
+        nav ul{
+            list-style:none;
+            padding-top:5px;
+        }
+        nav li{
+            display:inline;
+            border-right: 1px solid white;
+        }
+        nav li a{
+            color:white;
+            text-decoration:none;
+        }
+        nav li a:hover{
+        color:violet;
+        text-decoration:none;
+        }
+        footer{
+            height:50px;
+            background-color:blue;
+            clear:both;
+            text-align:center;
+        }
+    </style>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div id="container">
+                <h1 style="text-align:center">Ha Thi Mai Linh</h1>
+
+                <nav>
+                    <ul>
+                        <li><a href="danhsach.aspx">List nhan vien</a></li>
+                        <li><a href="themnv.aspx">Add nhan vien</a></li>
+                    </ul>
+                </nav>
+
+                <section id="main">
+                    <asp:ContentPlaceHolder ID="noidung" runat="server">
+                    </asp:ContentPlaceHolder>
+                </section>
+
+                <footer>
+                    Fit-Haui 2024
+                </footer>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
